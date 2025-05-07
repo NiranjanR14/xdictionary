@@ -37,9 +37,10 @@ const Dictionary = () => {
         </button>
       </div>
       <div>
+      <h3>Definition:</h3>
         {result && (
           <div style={{ marginTop: "20px", fontSize: "18px" }}>
-            <h3>Definition:</h3>
+            
              {typeof result === "string" ? <p>{result}</p> : result}
           </div>
         )}
