@@ -15,9 +15,9 @@ const Dictionary = () => {
   const handleSearch = () => {
     const foundWord = dictionary.find((entry) => entry.word.toLowerCase() === searchTerm.toLowerCase());
     if (foundWord) {
-      setResult(<><h3>Definition:</h3> <p>{foundWord.meaning}</p></>);
+      setResult(<> <p>{foundWord.meaning}</p></>);
     } else {
-      setResult(<><h3>Definition:</h3> <p>Word not found in the dictionary.</p></>);
+      setResult(<> <p>Word not found in the dictionary.</p></>);
     }
   };
 
@@ -39,6 +39,7 @@ const Dictionary = () => {
       <div>
         {result && (
           <div style={{ marginTop: "20px", fontSize: "18px" }}>
+            <h3>Definition:</h3>
              {typeof result === "string" ? <p>{result}</p> : result}
           </div>
         )}
